@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Nexus - Project Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Project Nexus</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="reports.html">Reports</a></li>                
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <header class="topbar">
+            <h1 id="main-title">Dashboard</h1>
+            <div class="user-profile">
+                <img src="Headshot .png" alt="User" class="profile-pic">
+                <span>Welcome, Celine</span>
+            </div>
+        </header>
+
+        <!-- Tab Content -->
+        <section id="tab-content">
+            <!-- Dashboard Overview Section -->
+            <div id="dashboard" class="tab">
+                <section class="overview">
+                    <div class="card">
+                        <h3>Total Projects</h3>
+                        <p>12</p>
+                        <a href="projects.html" class="card-btn">View Projects</a>
+                    </div>
+                    <div class="card">
+                        <h3>Ongoing Tasks</h3>
+                        <p>28</p>
+                        <a href="tasks.html" class="card-btn">View Tasks</a>
+                    </div>
+                    <div class="card">
+                        <h3>Completed Tasks</h3>
+                        <p>102</p>
+                        <a href="tasks.html" class="card-btn">View Tasks</a>
+                    </div>
+                </section>
+                
+
+                <!-- Task Management Section on Dashboard -->
+                <section class="tasks">
+                    <h2>Task Management</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Project</th>
+                                <th>Status</th>
+                                <th>Due Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Build API</td>
+                                <td>Web Redesign</td>
+                                <td><span class="status in-progress">In Progress</span></td>
+                                <td>March 30</td>
+                            </tr>
+                            <tr>
+                                <td>Design Mockups</td>
+                                <td>Mobile App</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>March 15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- Projects Section -->
+            <div id="projects" class="tab" style="display:none;">
+                <h2>Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Manager</th>
+                            <th>Status</th>
+                            <th>Budget Allocated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Redesign</td>
+                            <td>Celine</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                            <td>$5000</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App</td>
+                            <td>John</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>$3000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tasks Section -->
+            <div id="tasks" class="tab" style="display:none;">
+                <h2>Task Management</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Build API</td>
+                            <td>Web Redesign</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                            <td>March 30</td>
+                        </tr>
+                        <tr>
+                            <td>Design Mockups</td>
+                            <td>Mobile App</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>March 15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Budget Section -->
+            <div id="budget" class="tab" style="display:none;">
+                <h2>Budget Overview</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Allocated Budget</th>
+                            <th>Spent Amount</th>
+                            <th>Remaining Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Redesign</td>
+                            <td>$5000</td>
+                            <td>$2000</td>
+                            <td>$3000</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App</td>
+                            <td>$3000</td>
+                            <td>$1500</td>
+                            <td>$1500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Reports Section -->
+            <div id="reports" class="tab" style="display:none;">
+                <h2>Reports</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report Type</th>
+                            <th>Generated By</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Budget Report</td>
+                            <td>Celine</td>
+                            <td>March 1, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Task Progress</td>
+                            <td>John</td>
+                            <td>March 5, 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
+<link rel="stylesheet" href="style.css" />
